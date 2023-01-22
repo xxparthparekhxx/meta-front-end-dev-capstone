@@ -2,9 +2,9 @@ import React from 'react'
 import "./styles.css"
 const Hero = () => {
     return (
+        <section className='center'>
         <section className='hero'>
             <article>
-
                 <h1>
                     Little Lemon
                 </h1>
@@ -17,6 +17,7 @@ const Hero = () => {
                 </button>
             </article>
             <img src="/images/restauranfood.jpg" alt="images of a brusheta" />
+        </section>
         </section>
     )
 }
