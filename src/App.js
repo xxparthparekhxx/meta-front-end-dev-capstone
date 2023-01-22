@@ -1,11 +1,16 @@
 
 import './App.css';
+import Header from './components/common/Header';
+import NavBar from './components/common/Nav';
+import Hero from './components/home/Hero';
 
 function App() {
   return (
-    <div className="App">
-     initail Setup
-    </div>
+    <>
+      <Header></Header>
+      <NavBar></NavBar>
+      <Hero></Hero>
+    </>
   );
 }
 

@@ -1,0 +1,26 @@
+nav>section {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+
+nav>section>ul {
+    display: flex;
+    min-width: 70%;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.Link {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-weight: 500;
+}

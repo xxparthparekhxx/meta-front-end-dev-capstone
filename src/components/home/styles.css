@@ -1,0 +1,35 @@
+.hero {
+    background-color: #495e57;
+    display: flex;
+    /* flex-wrap: wrap; */
+    padding: 1em 10% 2em 10%;
+    flex-direction: row;
+
+}
+
+.hero button {
+    border: none;
+    font-size: 1em;
+    padding: 3% 7% 3% 7%;
+    
+    border-radius: 15px;
+    background-color: #f4ce14;
+    color: black;
+    font-size: larger;
+    font-weight: 700;
+}
+.hero h1{
+    color:#f4ce14;
+    font-size: xx-large;
+}
+.hero h4,p{
+    color:white;
+    max-width: 50%;
+}
+.hero img {
+    border-radius: 15px;
+    max-width:300px;
+    /* margin: 10px; */
+    position: relative;
+    top: 10px;
+}
