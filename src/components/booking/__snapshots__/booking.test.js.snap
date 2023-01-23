@@ -1,0 +1,416 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReservationForm submits the form correctly 1`] = `
+Array [
+  <nav>
+    <section>
+      <img
+        alt=""
+        src="/images/Logo.svg"
+      />
+      <ul>
+        <li>
+          <a
+            className="Link"
+            href="/"
+            onClick={[Function]}
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            className="Link"
+            href="/about"
+            onClick={[Function]}
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            className="Link"
+            href="/menu"
+            onClick={[Function]}
+          >
+            Menu
+          </a>
+        </li>
+        <li>
+          <a
+            className="Link"
+            href="/reservations"
+            onClick={[Function]}
+          >
+            Reservations
+          </a>
+        </li>
+        <li>
+          <a
+            className="Link"
+            href="/order-online"
+            onClick={[Function]}
+          >
+            Order Online
+          </a>
+        </li>
+        <li>
+          <a
+            className="Link"
+            href="/login"
+            onClick={[Function]}
+          >
+            Login
+          </a>
+        </li>
+      </ul>
+    </section>
+  </nav>,
+  <nav>
+    <div
+      style={
+        Object {
+          "color": "black",
+          "padding": "20px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "row",
+            "justifyContent": "space-between",
+          }
+        }
+      >
+        <div
+          style={
+            Object {
+              "display": "flex",
+              "flexDirection": "row",
+            }
+          }
+        >
+          <div
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "white",
+                "border": "1px",
+                "borderColor": "#f4ce14",
+                "borderRadius": "10px 10px 0px 0px",
+                "borderStyle": "solid",
+                "padding": "15px 70px 15px 70px",
+              }
+            }
+          >
+            Book a table
+          </div>
+          <div
+            onClick={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#E0E0E0",
+                "border": "1px",
+                "borderColor": "#DFDFDF",
+                "borderRadius": "10px 10px 0px 0px",
+                "borderStyle": "none",
+                "padding": "15px 70px 15px 70px",
+              }
+            }
+          >
+            See Reservations
+          </div>
+        </div>
+      </div>
+      <div
+        style={
+          Object {
+            "border": "1.44px solid #f4ce14",
+          }
+        }
+      >
+        <section>
+          <main>
+            <form
+              action="#"
+              onReset={[Function]}
+              onSubmit={[Function]}
+            >
+              <label
+                htmlFor="reservationDate"
+              >
+                Choose date
+              </label>
+              <input
+                id="reservationDate"
+                name="reservationDate"
+                onBlur={[Function]}
+                onChange={[Function]}
+                type="date"
+                value=""
+              />
+              <label
+                htmlFor="reservationTime"
+              >
+                Choose time
+              </label>
+              <select
+                id="reservationTime"
+                name="reservationTime"
+                onBlur={[Function]}
+                onChange={[Function]}
+                value=""
+              >
+                <option />
+                <option>
+                  17:00
+                </option>
+                <option>
+                  18:00
+                </option>
+                <option>
+                  19:00
+                </option>
+                <option>
+                  20:00
+                </option>
+                <option>
+                  21:00
+                </option>
+                <option>
+                  22:00
+                </option>
+              </select>
+              <label
+                htmlFor="guests"
+              >
+                Number of guests
+              </label>
+              <input
+                id="guests"
+                max="10"
+                min="1"
+                name="guests"
+                onBlur={[Function]}
+                onChange={[Function]}
+                placeholder="Num"
+                type="number"
+                value=""
+              />
+              <label
+                htmlFor="occasion"
+              >
+                Occasion
+              </label>
+              <select
+                default="Birthday"
+                id="occasion"
+                name="occasion"
+                onBlur={[Function]}
+                onChange={[Function]}
+                value=""
+              >
+                <option />
+                <option>
+                  Birthday
+                </option>
+                <option>
+                  Anniversary
+                </option>
+              </select>
+              <button
+                disabled={false}
+                type="submit"
+              >
+                Make Your reservation
+              </button>
+            </form>
+          </main>
+        </section>
+      </div>
+    </div>
+  </nav>,
+  <footer
+    style={
+      Object {
+        "backgroundColor": "#495e57",
+        "marginTop": "100px",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "justifyContent": "center",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "width": "70%",
+          }
+        }
+      >
+          
+        <section
+          style={
+            Object {
+              "display": "flex",
+              "flexDirection": "row",
+              "flexWrap": "wrap",
+              "justifyContent": "space-between",
+              "maxWidth": "100%",
+            }
+          }
+        >
+          <img
+            alt=""
+            src="/images/Logo .svg"
+          />
+          <section
+            style={
+              Object {
+                "display": "flex",
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+                "justifyContent": "space-evenly",
+                "width": "70%",
+              }
+            }
+          >
+            <section
+              style={
+                Object {
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <h1>
+                Doormat Navigation
+              </h1>
+              <a
+                className="Link"
+                href="/"
+                onClick={[Function]}
+              >
+                Home
+              </a>
+              <a
+                className="Link"
+                href="/"
+                onClick={[Function]}
+              >
+                about
+              </a>
+              <a
+                className="Link"
+                href="/"
+                onClick={[Function]}
+              >
+                menu
+              </a>
+              <a
+                className="Link"
+                href="/"
+                onClick={[Function]}
+              >
+                Reservations
+              </a>
+              <a
+                className="Link"
+                href="/"
+                onClick={[Function]}
+              >
+                Order Online
+              </a>
+              <a
+                className="Link"
+                href="/"
+                onClick={[Function]}
+              >
+                Login
+              </a>
+            </section>
+            <section
+              style={
+                Object {
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <h1>
+                Contact
+              </h1>
+              <a
+                className="Link"
+                href="/"
+                onClick={[Function]}
+              >
+                Address
+              </a>
+              <a
+                className="Link"
+                href="/"
+                onClick={[Function]}
+              >
+                phone number
+              </a>
+              <a
+                className="Link"
+                href="/"
+                onClick={[Function]}
+              >
+                email
+              </a>
+            </section>
+            <section
+              style={
+                Object {
+                  "display": "flex",
+                  "flexDirection": "column",
+                  "flexWrap": "wrap",
+                }
+              }
+            >
+              <h1>
+                Social Media Links
+              </h1>
+              <a
+                className="Link"
+                href="/"
+                onClick={[Function]}
+              >
+                Address
+              </a>
+              <a
+                className="Link"
+                href="/"
+                onClick={[Function]}
+              >
+                Phone number
+              </a>
+              <a
+                className="Link"
+                href="/"
+                onClick={[Function]}
+              >
+                email
+              </a>
+            </section>
+          </section>
+        </section>
+         
+      </div>
+    </div>
+  </footer>,
+]
+`;
