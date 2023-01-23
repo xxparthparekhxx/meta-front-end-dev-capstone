@@ -15,9 +15,11 @@ export const BookingPage = () => {
 
     useEffect(() => {
         const res = localStorage.getItem("reservations")
-        if(res != null){
-            
-            setReservations()
+        if (res != null) {
+            console.log(res)
+
+            setReservations(JSON.parse(res))
+
         }
         return () => {
 
@@ -35,7 +37,7 @@ export const BookingPage = () => {
                             children: [
                                 <ReservationForm reservations={Reservations} setReservations={(e) => {
                                     setReservations([...Reservations, e]);
-                                    localStorage.setItem("reservations", Reservations)
+                                    localStorage.setItem("reservations", JSON.stringify([...Reservations, e]))
                                 }} />
                             ],
                             Name: "Book a table"
@@ -75,11 +77,15 @@ const SeeReservation = ({ reservations }) => {
 }
 
 export const ReservationForm = ({ setReservations, reservations }) => {
+    const [SelectedDate, setSelectedDate] = useState()
     const validateReservation = values => {
         const errors = {};
 
         if (!values.reservationDate) {
+
             errors.reservationDate = "Date is required";
+        } else {
+            setSelectedDate(values.reservationDate)
         }
 
         if (!values.reservationTime) {
@@ -108,8 +114,7 @@ export const ReservationForm = ({ setReservations, reservations }) => {
         await resetForm();
         setSubmitting(false);
     };
-    const resrevedHours = reservations?.length > 0 ? reservations.map(e => e.reservationTime) : []
-    console.log(resrevedHours)
+
     const OpenHours = [
         "17:00",
         "18:00",
@@ -118,7 +123,24 @@ export const ReservationForm = ({ setReservations, reservations }) => {
         "21:00",
         "22:00",
     ]
+    const getOptions = e => {
+        let reserved = false;
 
+        for (let i = 0; i < reservations.length; i++) {
+            console.log(e, SelectedDate, reservations[i].reservationTime, reservations[i].reservationTime == e)
+            if (reservations[i].reservationTime == e &&
+                reservations[i].reservationDate == SelectedDate) {
+                reserved = true;
+                break
+            }
+
+        }
+        if (reserved) {
+            return <></>
+        } else {
+            return <option key={e}>{e}</option>
+        }
+    }
     return (
         <section>
 
@@ -127,7 +149,7 @@ export const ReservationForm = ({ setReservations, reservations }) => {
 
                 <Formik
                     initialValues={{
-                        reservationDate: "",
+                        reservationDate: Date.now(),
                         reservationTime: "",
                         guests: "",
                         occasion: ""
@@ -135,7 +157,7 @@ export const ReservationForm = ({ setReservations, reservations }) => {
                     validate={validateReservation}
                     onSubmit={onSubmitHandler}
                 >
-                    {({ errors, touched, isSubmitting }) => (
+                    {({ errors, touched, isSubmitting, }) => (
                         <Form>
                             <label htmlFor="reservationDate">Choose date</label>
                             <Field type="date" name="reservationDate" id="reservationDate" />
@@ -145,20 +167,7 @@ export const ReservationForm = ({ setReservations, reservations }) => {
                             <label htmlFor="reservationTime">Choose time</label>
                             <Field as="select" name="reservationTime" id="reservationTime">
                                 <option key="ni"></option>
-                                {OpenHours.map(e => {
-                                    console.log(!(e in resrevedHours), e, resrevedHours)
-                                    let reserved = false;
-                                    for (let i = 0; i < resrevedHours.length; i++) {
-                                        if (resrevedHours[i] == e) {
-                                            reserved = true
-                                        }
-                                    }
-                                    if (reserved) {
-                                        return <></>
-                                    } else {
-                                        return <option key={e}>{e}</option>
-                                    }
-                                })}
+                                {OpenHours.map(getOptions)}
                             </Field>
                             {errors.reservationTime && touched.reservationTime ? (
                                 <div style={{ color: "red" }}>{errors.reservationTime}</div>
