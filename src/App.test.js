@@ -1,8 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('Is There a button called reserce a table on the main page', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  const linkElement = screen.getByText("Reserve a Table");
+  expect(linkElement).toBeInTheDocument();
+});
+test('Is There a button clickable', () => {
+  render(<App />);
+  const linkElement = screen.getByText("Reserve a Table");
+  linkElement.click()
+  
   expect(linkElement).toBeInTheDocument();
 });

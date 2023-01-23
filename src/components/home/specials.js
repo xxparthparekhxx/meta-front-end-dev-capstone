@@ -54,7 +54,7 @@ const Specials = () => {
                         </button>
                     </Row>
                     <Grid>
-                        {data.map(e => <SpecialItems {...e} />)}
+                        {data.map((e, i) => <SpecialItems key={i} {...e} />)}
                     </Grid>
                 </div>
             </Center>
@@ -65,15 +65,15 @@ const Specials = () => {
 
 export const SpecialItems = ({ title, imgsrc, price, description }) => {
     return (
-        <article style={{ width: "300px" , backgroundColor:"#EDEFEE", padding:"20px",margin:"20px", borderRadius:"10px"}}>
-            <img src={imgsrc} style={{ width: "300px" ,borderRadius:"10px"}} alt={`${title} image`} />
-            <Row styles={{justifyContent:"space-between"}}>
+        <article style={{ width: "300px", backgroundColor: "#EDEFEE", padding: "20px", margin: "20px", borderRadius: "10px" }}>
+            <img src={imgsrc} style={{ width: "300px", borderRadius: "10px" }} alt={`${title} image`} />
+            <Row styles={{ justifyContent: "space-between" }}>
                 <h2>{title}</h2>
-                <h2 style={{color:'orange' }}>
+                <h2 style={{ color: 'orange' }}>
                     {price}
                 </h2>
             </Row>
-            <p style={{color:'black', "max-width":"100%"}}>
+            <p style={{ color: 'black', maxWidth: "100%" }}>
                 {description}
             </p>
             <h2>

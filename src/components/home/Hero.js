@@ -1,6 +1,8 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import "./styles.css"
 const Hero = () => {
+    const nav =useNavigate()
     return (
         <section className='center'>
         <section className='hero'>
@@ -12,7 +14,7 @@ const Hero = () => {
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus est repudiandae neque veniam impedit iusto recusandae dicta magnam ipsum enim quasi quas inventore consequuntur, perspiciatis corporis odit. Veritatis, quia amet!
                 </p>
-                <button>
+                <button onClick={()=>{nav("booking-page")}}>
                     Reserve a Table
                 </button>
             </article>

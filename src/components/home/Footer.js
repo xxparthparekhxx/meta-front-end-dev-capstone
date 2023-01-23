@@ -11,7 +11,7 @@ const Footer = () => {
 
             <Row  styles={{justifyContent:"space-between", maxWidth:"100%"}}>
 
-            <img src="/images/Logo .svg" alt="" srcset="" />
+            <img src="/images/Logo .svg" alt="" />
             <Row styles={{justifyContent:"space-evenly", width:"70%"}}>
                 <Column>
                     <h1>
