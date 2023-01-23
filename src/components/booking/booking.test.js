@@ -13,6 +13,6 @@ describe('ReservationForm', () => {
         );
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot();
+
     });
 });
-

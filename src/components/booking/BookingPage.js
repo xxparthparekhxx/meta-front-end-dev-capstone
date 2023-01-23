@@ -15,7 +15,10 @@ export const BookingPage = () => {
 
     useEffect(() => {
         const res = localStorage.getItem("reservations")
-        setReservations(res)
+        if(res != null){
+            
+            setReservations()
+        }
         return () => {
 
         }
